@@ -33,7 +33,7 @@ const ProductFilters = ({
               className="search-input p1"
             />
             {searchQuery && (
-              <button 
+              <button
                 className="clear-search"
                 onClick={() => onSearchChange('')}
               >
@@ -64,8 +64,8 @@ const ProductFilters = ({
         {/* Sort Options */}
         <div className="filter-section">
           <h3 className="filter-title p1-medium">Ordenar por</h3>
-          <select 
-            value={sortBy} 
+          <select
+            value={sortBy}
             onChange={(e) => onSortChange(e.target.value)}
             className="sort-select p1"
           >

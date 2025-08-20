@@ -15,8 +15,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       case 'inactive':
         return <span className="status-badge status-inactive l1">No disponible</span>
       case 'pending':
-        // Handle pending status
-        return <span className="status-badge status-active l1">Disponible</span>
+        return <span className="status-badge status-inactive l1">No disponible</span>
       default:
         return null
     }
@@ -55,7 +54,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <div className="image-placeholder">
             <span className="material-icons">image</span>
           </div>
-          
+
           {/* Status Badge */}
           <div className="product-status">
             {getStatusBadge(product.status)}
@@ -74,7 +73,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
               <span className="material-icons">category</span>
               <span className="l1">{product.category}</span>
             </div>
-            
+
             {getStockStatus(product.stock)}
           </div>
 
@@ -117,7 +116,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
 
         <div className="card-actions">
-          <button 
+          <button
             className="btn btn-secondary l1"
             onClick={(e) => {
               e.preventDefault()
